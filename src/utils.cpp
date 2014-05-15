@@ -103,6 +103,10 @@ std::vector<unsigned int> Utils::getCoresOnSameUnit(unsigned int id) {
       for (unsigned int i = val; i <= lastVal; ++i) {
          res.push_back(i);
       }
+
+      if (ifd.peek() == ',') {
+         ifd.get(sep);
+      }
    }
 
    return res;
