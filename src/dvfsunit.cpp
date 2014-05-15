@@ -93,8 +93,6 @@ void DVFSUnit::setFrequency(unsigned int freq) {
    }
 
    for (unsigned int i = 0; i < freqFiles_.size(); ++i) {
-      std::cout << "core " << i << " setting freq " << freq << std::endl;
-
       *(freqFiles_[i]) << freq;
 
       if (freqFiles_[i]->fail()) {
